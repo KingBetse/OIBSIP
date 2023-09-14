@@ -1,0 +1,104 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins&effect=poppins|outline|emboss|shadow-multiple);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "sofia";
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+  background: linear-gradient(130deg, #eebe90, #90b8ee, #6e8fdd);
+  background-size: 600% 600%;
+
+  animation: AnimationName 26s ease infinite;
+}
+
+.container {
+  width: 400px;
+  height: 600px;
+  background: #081b29;
+  border-radius: 15px;
+}
+
+.container input {
+  margin-top: 10px;
+  height: 130px;
+  width: 400px;
+  font-size: 50px;
+  padding-right: 10px;
+  padding-top: 25px;
+  outline: none;
+  background: #081b29;
+  transition: 0.3s;
+  color: aliceblue;
+}
+.container input[type="text"] {
+  border: none;
+  outline: none;
+
+  background: #092131;
+  border-bottom: 1px solid #535353;
+  transition: 0.3s;
+  text-align: right;
+}
+.container inp {
+}
+.container .buttons {
+  margin-top: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+
+  gap: 10px;
+}
+.container .buttons .equal {
+  grid-area: 5/ 3 / span 1 / span 2;
+}
+
+.container .button {
+  text-decoration: none;
+  border: none;
+  background-color: #0b2537;
+  color: aliceblue;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  font-size: 25px;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all;
+  /* box-shadow: rgba(111, 111, 111, 0.24) 0px 3px 8px; */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+.container .button:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
+}
+.container .button.acc {
+  color: rgb(80, 214, 232);
+}
+.container h1 {
+  color: whitesmoke;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 20px;
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 97% 0%;
+  }
+  50% {
+    background-position: 4% 100%;
+  }
+  100% {
+    background-position: 97% 0%;
+  }
+}

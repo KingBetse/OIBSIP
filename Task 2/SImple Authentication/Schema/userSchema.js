@@ -1,20 +1,21 @@
-const ajvInstance = require("./ajv-instance");
-const schema = {
-  type: "object",
-  properties: {
-    id: {
-      type: "integer",
-      uniqueitem: true,
-    },
-    email: {
-      type: "string",
-      format: "email",
-      uniqueitem: true,
-    },
-    password: {
-      type: "string",
-    },
+const mongoose = require("mongoose");
+const validator = require("validator");
+const userSchema = mongoose.Schema({
+  email: {
+    type: String,
+    require: [true, "User must have Email"],
+    unique: [true, "user must not have the same email"],
+    lowercase: true,
+    validate: [validator.isEmail, "please provide a valid email"],
   },
-  required: ["email", "password"],
-};
-module.exports = ajvInstance.compile(schema);
+  password: {
+    type: String,
+    require: [true, "User must have password"],
+    minLength: 4,
+  },
+});
+const User = mongoose.model("User", userSchema);
+//username:kingbetse
+//4YWQgTzleNuqwcoY
+//password:4YWQgTzleNuqwcoY
+module.exports = User;

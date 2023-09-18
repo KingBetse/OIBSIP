@@ -1,24 +1,51 @@
-const fs = require("fs");
+const userModel = require("../Schema/userSchema");
 const bycript = require("bcryptjs");
-const user = JSON.parse(fs.readFileSync("./user.json"));
 
 exports.signUp = async (req, res, next) => {
-  const password = req.body.password;
-  const email = req.body.email;
-  const hash = await bycript.hash(password, 12);
+  try {
+    const password = req.body.password;
+    const email = req.body.email;
+    const hash = await bycript.hash(password, 12);
+    const user = await userModel.create({
+      email,
+      password: hash,
+    });
 
-  const newId = user[user.length - 1].id + 1;
-  const newUser = Object.assign({ id: newId }, { email }, { password: hash });
-
-  user.push(newUser);
-  fs.writeFile("./user.json", JSON.stringify(user), (err) => {
-    return res.status(201).json({
+    return await res.status(200).json({
       status: "success",
       data: {
-        users: newUser,
+        user,
       },
     });
-  });
+    next();
+  } catch (err) {
+    // let error = { ...err };
+    // console.log(error);
+
+    if (err.name === "ValidationError") {
+      // const errors = Object.values(error.errors).map((el) => el.message);
+      // const message = `Invalid input data. ${errors.join(". ")}`;
+      const message = "invalid Email please try again";
+
+      return await res.status(404).json({
+        status: "fail",
+        message: message,
+      });
+    } else if (err.code === 11000) {
+      const message = `Duplicate Email found. Please use another Email!`;
+      return await res.status(404).json({
+        status: "fail",
+        message: message,
+      });
+    } else {
+      return await res.status(404).json({
+        status: "fail",
+        message: err.name,
+      });
+    }
+    next();
+  }
+  next();
 };
 exports.logIn = async (req, res, next) => {
   const { email, password } = req.body;
@@ -29,4 +56,23 @@ exports.logIn = async (req, res, next) => {
       message: "Enter the email and password",
     });
   }
+  const user = await userModel.findOne({ email });
+  if (!user) {
+    return await res.status(404).json({
+      stats: "fail",
+      message: "Incorrect Email or Password",
+    });
+  }
+  const isMatch = await bycript.compare(password, user.password);
+
+  if (!isMatch) {
+    return await res.status(404).json({
+      stats: "fail",
+      message: "Incorrect Email or Password",
+    });
+  }
+  return await res.status(200).json({
+    status: "success",
+    message: "Login Successful",
+  });
 };

@@ -1,0 +1,24 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Sign Up
+  link(rel='stylesheet' href='./style/sign.css')
+.container
+  .registration.form
+    header Signup
+    form.form1(action="")
+      input#email(type='text' placeholder='Enter your email' required='')
+      input#password(type='password' placeholder='Create a password' minlength='8' maxlength='16' required='')
+      input#cPassword(type='password' placeholder='Confirm your password' minlength='8' maxlength='16' required='')
+      a(href='')
+        input.button(type='submit' value='Signup')
+    .signup
+      span.signup
+        | Already have an account?
+        a(href='/login')
+          label(for='check') Login
+
+          
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js" ></script>
+script(src="js/signup.js")

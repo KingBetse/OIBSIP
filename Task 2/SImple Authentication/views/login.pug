@@ -1,0 +1,22 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Log In
+  link(rel='stylesheet' href='./style/sign.css')
+.container
+  .login.form
+    header Login
+    form.form(action='#')
+      input#email(type='text' placeholder='Enter your email')
+      input#password(type='password' placeholder='Enter your password' minlength='8' maxlength='16')
+      a(href='#') Forgot password?
+      input.button(type='submit' value='Login')
+    .signup
+      span.signup
+        | Don&apos;t have an account?
+        a(href='/signup')
+          label(for='check') Signup
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js" ></script>
+script(src="js/login.js")

@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Inconsolata&family=Nabla&family=Oswald&family=Poppins:wght@400;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Inconsolata&family=Nabla&family=Oswald&family=Poppins:wght@200;400;500&family=Skranji&display=swap");
 
 * {
   margin: 0;
@@ -27,6 +28,7 @@ a {
   justify-content: space-between;
   text-align: center;
   padding: 20px;
+  font-weight: 200;
 }
 .navbar ul {
   display: flex;
@@ -34,6 +36,7 @@ a {
   text-align: center;
   gap: 3px;
   font-family: poppins;
+  font-weight: 200;
   text-decoration: none;
   text-decoration-style: none;
   padding-right: 60px;
@@ -47,7 +50,7 @@ a {
   position: relative;
   padding: 0px 18px;
   color: rgb(0, 0, 0);
-  font-weight: bold;
+  font-weight: 500;
   letter-spacing: 0.5px;
 }
 .navbar ul li a::after {
@@ -77,6 +80,7 @@ a {
   color: aliceblue;
   font-size: 20px;
 }
+
 .home {
   display: flex;
   justify-content: center;
@@ -86,6 +90,7 @@ a {
   padding: 350px 150px;
 }
 .cont {
+  font-family: "Comfortaa", cursive;
 }
 .btn-reg {
   position: relative;
@@ -121,7 +126,8 @@ a {
 .about h2 {
   margin: 0 45%;
   padding-top: 3%;
-
+  font-family: "Skranji", cursive;
+  font-weight: 300;
   font-size: 50px;
 }
 .service .box {
@@ -129,8 +135,10 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  font-size: larger;
+  font-weight: 400;
   padding: 25px 100px;
+  font-family: "Comfortaa", cursive;
 }
 .service .p-box {
   padding-left: 100px;
@@ -159,7 +167,7 @@ a {
 }
 .about .about-2 img,
 .about-2 .box-2 p {
-  /* margin-left: -200px; */
+  /* margin-left: -400px; */
   /* margin-right: 120px; */
 }
 .about .about-all .box-1 .img-2 {
@@ -168,10 +176,14 @@ a {
 .about .box-1 {
   /* border: 2px solid royalblue;
   border-radius: 15px 15px none none;
-  border-style: solid none none solid; */
+  padding: 30px; */
   max-width: 500px;
+  font-family: "Comfortaa", cursive;
+  font-size: larger;
   /* margin: 100px; */
-  padding-top: 150px;
+  padding-top: 90px;
+  font-weight: 400;
+
   /* padding-left: 150px; */
 }
 
@@ -188,7 +200,9 @@ a {
   /* border: 2px solid royalblue; */
   border-radius: 50px 15px;
   max-width: 500px;
-
+  font-size: larger;
+  font-weight: 400;
+  font-family: "Comfortaa", cursive;
   /* margin-right: 25%; */
   padding-top: 150px;
 }
@@ -204,7 +218,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover; */
   background: #5e503f;
-  padding: 70px 0px;
+  padding: 40px 0px;
 }
 .footer .contain {
   max-width: 1170px;
@@ -220,15 +234,24 @@ a {
 .footer .cluster .latest h2,
 .instagram h2,
 .location h2 {
+  font-size: 30px;
   padding-bottom: 50px;
   padding-left: 50px;
+  font-weight: 300;
+  color: rgb(20, 13, 13);
+
+  font-family: "Skranji", cursive;
 }
 .footer .cluster .location p {
   /* position: relative; */
   padding-bottom: 10px;
-  color: #a0c4e2;
   transition: 0.3s;
+  color: #a0c4e2;
+
   /* width: 350px; */
+}
+.footer .cluster .location p a {
+  color: #a0c4e2;
 }
 .footer .cluster .location p:hover,
 .latest .news:hover {
@@ -251,6 +274,7 @@ a {
   width: 300px;
   gap: 5px;
   font-size: 12px;
+  transition: 0.5s;
   padding-bottom: 10px;
   color: #a0c4e2;
 }
@@ -266,6 +290,7 @@ a {
   /* transition: 0.5s; */
 }
 .footer .cluster .instagram {
+  margin-top: -70px;
   max-height: 500px;
   max-width: 1400px;
 }
@@ -326,7 +351,17 @@ a {
   gap: 40px;
   padding-top: 30px;
 
-  font-size: 30px;
+  font-size: 50px;
+}
+.footer .contact i {
+  color: black;
+  transition: 0.4s;
+}
+.footer .contact i:hover {
+  color: rgb(21, 60, 83);
+  transition: 1s;
+  transform: rotate(360deg);
+  /* transform: matrix3d(21, 34, 64); */
 }
 
 @media screen and (max-width: 600px) {
@@ -385,7 +420,7 @@ a {
     padding-left: 0px;
   }
   .service .box img {
-    width: 200px;
+    width: 400px;
     height: 150px;
     /* margin-right: 10%; */
   }
@@ -416,7 +451,7 @@ a {
   }
   .about .about-all img,
   .about-2 img {
-    width: 200px;
+    width: 400px;
     height: 150px;
   }
   .about .about-all p,
@@ -446,7 +481,7 @@ a {
   }
   .about .about-2 img,
   .about-2 .box-2 p {
-    /* margin-left: -200px; */
+    /* margin-left: -400px; */
     margin-right: 0px;
   }
   .footer .cluster .instagram,

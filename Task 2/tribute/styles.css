@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Inconsolata&family=Nabla&family=Poppins:wght@200;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Inconsolata&family=Nabla&family=Oswald&family=Poppins:wght@200;500&display=swap");
+body {
+  width: 21cm;
+  height: 29.7cm;
+  size: 7in 9.25in;
+  margin: auto;
+  background: linear-gradient(273deg, #909090, #d0d0d0, #000000);
+  background-size: 180% 180%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+a {
+  text-decoration: none;
+  color: bisque;
+}
+a:hover {
+  color: burlywood;
+  text-decoration: underline;
+}
+header {
+  text-align: center;
+  border-style: solid;
+  color: white;
+  border-color: white;
+  background-color: hsl(0, 0%, 0%);
+  box-shadow: 0 4px rgb(171, 198, 198);
+}
+#upper {
+  float: left;
+  width: 50%;
+  font-size: 0.9cm;
+  word-wrap: break-word;
+  text-align: center;
+  font-family: Calibri;
+  font-weight: bolder;
+  color: rgb(36, 37, 38);
+  vertical-align: middle;
+}
+#image {
+  display: inline-block;
+  height: 20%;
+  align-items: center;
+  margin-left: 60px;
+  border-radius: 50%;
+  width: 30%;
+}
+#para {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-align: start;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12;
+  margin-top: 20px;
+  padding-right: 2cm;
+  padding-top: 1cm;
+  padding-left: 2.5cm;
+  padding-bottom: 28px;
+}
+#para .info {
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+span {
+  font-family: "Oswald", sans-serif;
+}
+.me {
+  font-family: "Comfortaa", cursive;
+}
+#bio {
+  font-family: Calibri;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

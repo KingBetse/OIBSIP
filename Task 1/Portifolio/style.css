@@ -9,13 +9,27 @@
 body {
   background: #081b29;
   min-width: 20em;
-  /* background-color: url(https://wallpaperaccess.com/1920x1080-gif);
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
 p {
   color: aliceblue;
 }
+a {
+  color: rgb(80, 214, 232);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: rgb(80, 214, 232);
+  text-decoration: underline;
+  letter-spacing: 1px;
+}
+
+a:focus,
+.btn:focus {
+  outline: none;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -67,20 +81,12 @@ p {
   font-weight: 400;
   margin-left: 35px;
   transition: 0.3s;
-  /* animation: slideTop 0.5s ease forwards;
-    animation-delay: calc(0.2s * var(--i)); */
 }
 .nav-bar a:hover {
   color: rgb(80, 214, 232);
 }
 .logo a:hover {
   color: rgb(80, 214, 232);
-}
-.nav-bar .active {
-  color: rgb(80, 214, 232);
-}
-
-.container {
 }
 
 .home {
@@ -257,10 +263,7 @@ p {
   overflow: hidden;
   transition: 0.5s;
 }
-/* .home-link a i {
-    font-size: 20px;
-  } */
-/* i used border-radius for overlay part of the links */
+
 .home-link a::before {
   content: "";
   position: absolute;
@@ -269,7 +272,6 @@ p {
   width: 100%;
   height: 0;
   background: rgb(80, 214, 232);
-
   transition: 0.5s;
   z-index: -1;
 }
@@ -285,21 +287,11 @@ p {
   position: absolute;
   top: 10%;
   right: 5%;
-  /* background-image: linear-gradient(
-    to bottom,
-    rgba(245, 246, 252, 0.52),
-    rgba(47, 47, 47, 0.73)
-  ); */
-  /* background-color: aliceblue; */
-  /* background: url("Image/person-using-transport.png"); */
 }
 .service,
 .project {
-  /* height: 100vh; */
   width: 100%;
-  /* padding-top: 5%; */
-  /* padding-left: 10%;
-  padding-right: 10%; */
+
   color: azure;
   padding: 2% 10% 10% 10%;
 }
@@ -326,7 +318,6 @@ p {
   display: grid;
   grid-gap: 25px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  /* border: 2px solid rgb(6, 109, 122); */
 }
 .service .box-collection .box {
   border: 2px solid rgb(80, 214, 232);
@@ -334,7 +325,6 @@ p {
   text-align: center;
   border-radius: 5px;
   transition: 0.4s;
-  /* background: #081b29; */
 }
 .box img {
   height: 70px;
@@ -403,30 +393,6 @@ p {
   transform: rotate(23);
   text-decoration: underline;
 }
-/*-----------------------
------ Basic Styles -----
--------------------------*/
-
-a {
-  color: rgb(80, 214, 232);
-  text-decoration: none;
-}
-
-a:hover,
-a:focus {
-  color: rgb(80, 214, 232);
-  text-decoration: underline;
-  letter-spacing: 2px;
-}
-
-a:focus,
-.btn:focus {
-  outline: none;
-}
-
-.img-responsive {
-  border: 1px solid #ddd;
-}
 
 .row {
   display: flex;
@@ -453,12 +419,6 @@ a:focus,
   text-transform: uppercase;
 }
 
-.section-title {
-  margin-top: -20px;
-  margin-bottom: 80px;
-  text-align: center;
-}
-
 .add-padding {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -476,7 +436,7 @@ a:focus,
   /* transition: opacity 0.2s ease-out; */
 }
 
-.btn-color1 {
+/* .btn-color1 {
   background: #525f9d;
 }
 
@@ -495,7 +455,7 @@ a:focus,
 .btn-color1 .fa,
 .btn-color2 .fa {
   margin-right: 15px;
-}
+} */
 .btn-holder {
   text-align: center;
 }
@@ -515,9 +475,9 @@ a:focus,
   text-transform: uppercase;
 }
 
-#contact-form.no-placeholder .form-group label {
+/* #contact-form.no-placeholder .form-group label {
   display: block;
-}
+} */
 
 #contact-form .controls {
   padding: 0;
@@ -538,8 +498,7 @@ a:focus,
   line-height: 32px;
   font-weight: 100;
   padding-left: 64px;
-  -webkit-transition: border-color 0.3s ease-out;
-  transition: border-color 0.3s ease-out;
+
   border-radius: 2px;
 }
 
@@ -558,13 +517,13 @@ a:focus,
   line-height: 53px;
   text-align: center;
   font-weight: 300;
-  opacity: 0.5;
-  transition: opacity 0.2s ease-out;
+  opacity: 0.4;
+  /* transition: opacity 0.2s ease-out; */
 }
 
-#contact-form.no-placeholder .form-group [class*="fa"] {
+/* #contact-form.no-placeholder .form-group [class*="fa"] {
   top: 30px;
-}
+} */
 
 #contact-form .form-control:focus + [class*="fa"] {
   opacity: 1;
@@ -584,8 +543,6 @@ a:focus,
   border-bottom: 3px solid rgb(80, 214, 232);
   outline: none;
   box-shadow: none;
-  -webkit-transition: border-color 0.3s ease-in;
-  transition: border-color 0.3s ease-in;
 }
 #main-footer {
   padding-top: 3%;
@@ -627,28 +584,26 @@ a:focus,
   display: inline-block;
   margin: 0 5px;
   border-radius: 3px;
-  box-shadow: 0 4px 0 transparent;
-  -webkit-transition: all 0.3s ease-out;
+
   transition: all 0.3s ease-out;
 }
 
 .social-links li a {
   display: block;
   color: #fff;
-  font-size: 21px;
+  font-size: 25px;
   width: 50px;
   height: 50px;
   line-height: 50px;
   text-align: center;
   background: #509b9e;
   border-radius: 50%;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
 }
 
 .social-links li a:hover {
   color: #fff;
   background: rgb(80, 214, 232);
+  transform: scale(1.1);
 }
 @media screen and (max-width: 500px) {
   .home {

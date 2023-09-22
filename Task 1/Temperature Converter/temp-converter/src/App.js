@@ -25,19 +25,19 @@ function Converter() {
   function handleCalc() {
     if (tempName === "*C") {
       const result = value * 1.8 + 32;
-      console.log(result);
+      
 
       return parseFloat(result).toFixed(2);
     } else if (tempName === "*F") {
       const result = ((value - 32) * 5) / 9;
-      console.log(result);
+      
       return parseFloat(result).toFixed(2);
     } else if (tempName === "*K") {
       const result = value - 273.15;
       return parseFloat(result).toFixed(2);
     } else if (tempName === "*c") {
       const result = Number(value) + 273.15;
-      console.log(result);
+      
       return parseFloat(result).toFixed(2);
     }
   }
@@ -93,7 +93,7 @@ function Converter() {
                   : ""
               }
         `
-            : "Enter Value"}
+            : setShow(false)}
           {""}
         </span>
       ) : (

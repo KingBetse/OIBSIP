@@ -11,24 +11,20 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <!-- <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"  />
+   
   </head>
   <body>
     <header class="header">
       <a href="#" class="logo">Betselot.</a>
       <nav class="nav-bar">
-        <a href="#home" style="--i: 1">Home</a>
+        <a href="#home">Home</a>
 
-        <a href="#service" style="--i: 3">Service</a>
-        <a href="#project" style="--i: 2">Projects</a>
-        <a href="#" style="--i: 2">About</a>
+        <a href="#service" >Service</a>
+        <a href="#project">Projects</a>
+        <a href="#contact">Contact</a>
 
-        <!-- <a href="#">Contact</a> -->
+       
       </nav>
     </header>
     <section class="container " id="home">
@@ -50,36 +46,45 @@
           </div>
         </div>
        
-        <div class="photo">
+        <div class="photo" data-aos="fade-left" data-aos-easing="ease-in-back"
+        data-aos-delay="2000"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+       
+        data-aos-offset="0">
           <img src="./Image/a.png" alt=""height="600" width="500">
         </div>
       </div>
     </section>
     <section class="service" id="service">
       <h3>Service</h3>
-      <div class="service-intro">
+      <div class="service-intro" data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom">
         As a software engineer, one of the key services I provide is software development. I specialize in designing, coding, and implementing software solutions to address specific needs and challenges. Whether it's developing a mobile application, creating a web-based platform, or building enterprise software, I work closely with clients to understand their requirements and translate them into functional and efficient software systems. Throughout the development process, I prioritize collaboration and effective communication to ensure that the end product aligns with the client's vision. Additionally, I am committed to continuous learning, staying up-to-date with the latest technologies and best practices, to deliver high-quality software that meets the needs of the end-users.
       </div>
       <div class="box-collection">
-        <div class="box">
+        <div class="box" data-aos="fade-up-right"data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
           <div class="image">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png"
               alt=""
             />
           </div>
-          <h3>HTML</h3>
+          <h2>HTML</h2>
         </div>
-        <div class="box">
+        <div class="box"  data-aos="fade-up"data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
           <div class="image">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/CSS.3.svg/1200px-CSS.3.svg.png"
               alt=""
             />
           </div>
-          <h3>CSS</h3>
+          <h2>CSS</h2>
         </div>
-        <div class="box">
+        <div class="box"   data-aos="fade-up"data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
           <div class="image">
             <img
               src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
@@ -88,88 +93,97 @@
           </div>
           <h3>Javascript</h3>
         </div>
-        <div class="box">
+        <div class="box"  data-aos="fade-up-left"data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
           <div class="image">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
               alt=""
             />
           </div>
-          <h3>Node JS</h3>
+          <h2>Node JS</h2>
         </div>
 
-        <div class="box">
+        <div class="box" data-aos="fade-up-right"data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
           <div class="image">
             <img
               src="data:image/jpeg;base64,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"
               alt=""
             />
           </div>
-          <h3>PHP</h3>
+          <h2>PHP</h2>
         </div>
-        <div class="box">
+        <div class="box"  data-aos="fade-up"data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
           <div class="image">
             <img
               src="https://1000logos.net/wp-content/uploads/2020/08/MongoDB-Emblem.jpg"
               alt=""
             />
           </div>
-          <h3>MongoDB</h3>
+          <h2>MongoDB</h2>
         </div>
 
-        <div class="box">
+        <div class="box"  data-aos="fade-up"data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
           <div class="image">
             <img
               src="data:image/png;base64,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"
               alt=""
             />
           </div>
-          <h3>MySQL</h3>
+          <h2>MySQL</h2>
         </div>
-        <div class="box">
+        <div class="box"  data-aos="fade-up-left"data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
           <div class="image">
             <img
               src="https://w7.pngwing.com/pngs/403/269/png-transparent-react-react-native-logos-brands-in-colors-icon-thumbnail.png"
               alt=""
             />
           </div>
-          <h3>React.js</h3>
+          <h2>React.js</h2>
         </div>
-        <div class="box">
+        <div class="box"  data-aos="fade-up-right"data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
           <div class="image">
             <img
               src="https://w7.pngwing.com/pngs/46/626/png-transparent-c-logo-the-c-programming-language-computer-icons-computer-programming-source-code-programming-miscellaneous-template-blue.png"
               alt=""
             />
           </div>
-          <h3>C++</h3>
+          <h2>C++</h2>
         </div>
-        <div class="box">
+        <div class="box"   data-aos="fade-up"data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
           <div class="image">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
               alt=""
             />
           </div>
-          <h3>Pyton</h3>
+          <h2>Pyton</h2>
         </div>
-        <div class="box">
+        <div class="box"  data-aos="fade-up"data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
           <div class="image">
             <img
               src="https://static.vecteezy.com/system/resources/previews/022/101/050/original/java-logo-transparent-free-png.png"
               alt=""
             />
           </div>
-          <h3>Java</h3>
+          <h2>Java</h2>
         </div>
-        <div class="box">
+        <div class="box"  data-aos="fade-up-left"data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
           <div class="image">
             <img
               src="https://logowik.com/content/uploads/images/flutter5786.jpg"
               alt=""
             />
           </div>
-          <h3>Flutter</h3>
+          <h2>Flutter</h2>
         </div>
 
         
@@ -178,7 +192,7 @@
     <section class="project" id="project">
       <h3>Project</h3>
       <div class="proj">
-        <div class="proj-card">
+        <div class="proj-card"data-aos="zoom-out-up">
           <div class="img-proj">
             <img
               src="https://nevonprojects.com/wp-content/uploads/2022/04/space-shooter-python-smpg.jpg"
@@ -196,7 +210,7 @@
             </div>
           </div>
         </div>
-        <div class="proj-card">
+        <div class="proj-card" data-aos="zoom-out-up">
           <div class="img-proj">
             <img src="https://nevonprojects.com/wp-content/uploads/2022/04/online-blood-bank-dotnet-smpg.jpg" />
           </div>
@@ -213,7 +227,7 @@
             </div>
           </div>
         </div>
-        <div class="proj-card">
+        <div class="proj-card" data-aos="zoom-out-up">
           <div class="img-proj">
             <img src="https://nevonprojects.com/wp-content/uploads/2022/04/doctor-appointment-booking-system-smpg.jpg" />
           </div>
@@ -238,27 +252,27 @@
       <div class="container text-center">
         <div class="row">
           <div class="cont-detail">
-            <h1 class="big-text">Contact Me</h1>
+            <h1 class="big-text"data-aos="fade-up-right" data-aos-duration="500">Contact Me</h1>
 
-            <p class="lead">Software Engineer.</p>
+            <p class="lead"data-aos="fade-up-right" data-aos-duration="700">Software Engineer.</p>
 
-            <p>
+            <p data-aos="fade-up-right" data-aos-duration="900">
               Sinatra, Ruby on Rails, JavaScript, Node.js, Express.js,
               Backbone.js, Handlebars.js, jQuery, AJAX, HTML5, CSS3, SASS, SQL,
               APIs, Git, GitHub/Bitbucket, WordPress, Heroku, Responsive/Mobile
               Development.
             </p>
 
-            <p>
+            <p data-aos="fade-up-right" data-aos-duration="1100">
               Please feel free to contact me with questions, comments or
               collaborations.
             </p>
 
-            <p>
+            <p data-aos="fade-up-right" data-aos-duration="1300"> 
               For more information,
               <a href="#" target="_blank">visit my blog.</a>
             </p>
-            <div class="info-contact">
+            <div class="info-contact" data-aos="fade-up-right" data-aos-duration="1500">
               <p><i class="fa-solid fa-phone">  </i>+251 909775609</p>
               <p><i class="fa-solid fa-location-dot">  </i><a href="https://www.google.com/search?q=9.002851%2C+38.766107&oq=&aqs=chrome.2.35i39i362l8.1692j0j15&sourceid=chrome&ie=UTF-8" target="_blank">Addis Ababa, Ethiopia</a></p>
               <p><i class="fa-solid fa-envelope"></i> king.betse@gmail.com</p>
@@ -269,8 +283,9 @@
 
           <form
             id="contact-form"
-            class="col-sm-6 col-md-offset-1 scrollimation fade-left d3"
-            novalidate
+         
+            data-aos="fade-down-left"
+             data-aos-duration="1700"
           >
             <div class="form-group">
               <label class="control-label" for="contact-name">Name</label>
@@ -279,7 +294,7 @@
                   id="contact-name"
                   name="contactName"
                   placeholder="Your name"
-                  class="form-control requiredField"
+                  class="form-control "
                   data-new-placeholder="Your name"
                   type="text"
                   required
@@ -296,7 +311,7 @@
                   id="contact-mail"
                   name="email"
                   placeholder="Your email"
-                  class="form-control requiredField"
+                  class="form-control"
                   type="email"
                   required
                 />
@@ -312,7 +327,7 @@
                   id="contact-message"
                   name="comments"
                   placeholder="Your message"
-                  class="form-control requiredField"
+                  class="form-control "
                   rows="6"
                   required
                 ></textarea>
@@ -358,7 +373,11 @@
         <p class="text-center">&copy; 2023 - Betselot Bezuayehu</p>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" ></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
 

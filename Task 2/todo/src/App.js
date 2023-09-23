@@ -2,8 +2,11 @@ import { useState } from "react";
 
 function App() {
   const [tasks, setTasks] = useState([]);
+  const [task, setTask] = useState("");
   const handleTasks = (task) => {
     setTasks((tasks) => [...tasks, task]);
+
+    console.log(task);
   };
   const deleteTask = (id) => {
     setTasks((tasks) => tasks.filter((task) => task.id !== id));
@@ -20,6 +23,8 @@ function App() {
     <div className="App">
       <Container
         handleTasks={handleTasks}
+        task={task}
+        setTask={setTask}
         tasks={tasks}
         deleteTask={deleteTask}
         handleCheck={handleCheck}
@@ -27,13 +32,21 @@ function App() {
     </div>
   );
 }
-function Container({ handleTasks, tasks, deleteTask, handleCheck }) {
-  const [task, setTask] = useState("");
+
+function Container({
+  handleTasks,
+  tasks,
+  setTask,
+  task,
+  deleteTask,
+  handleCheck,
+}) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!task) return;
     const newTask = { task, checked: false, id: Date.now() };
     handleTasks(newTask);
+    e.target.reset();
   };
   return (
     <div className="container">
@@ -62,10 +75,8 @@ function Container({ handleTasks, tasks, deleteTask, handleCheck }) {
       </div>
     </div>
   );
-  function Tasks({ tasks, deleteTask, handleCheck }) {
-    // const [isChecked, setIschecked] = useState(false);
 
-    console.log(tasks.checked);
+  function Tasks({ tasks, deleteTask, handleCheck }) {
     return (
       <div className="tasks">
         <div>
